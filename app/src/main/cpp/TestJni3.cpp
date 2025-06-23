@@ -22,7 +22,7 @@
  * 让C代码调用Java中JNI类的public int add(int x ,int y)
  */
 extern "C"
-void Java_com_example_ndkdemo_test2_JNI2_callbackAdd(JNIEnv *env, jobject jobj) {
+void Java_com_example_ndkdemo_test3_TestJni3_callbackAdd(JNIEnv *env, jobject jobj) {
 //1.得到字节码
 //jclass      (*FindClass)(JNIEnv*, const char*);
     jclass jclazz = (*env).FindClass("com/example/ndkdemo/test3/TestJni3");
@@ -44,7 +44,7 @@ void Java_com_example_ndkdemo_test2_JNI2_callbackAdd(JNIEnv *env, jobject jobj) 
  * public void helloFromJava()
  */
 extern "C"
-void JNICALL Java_com_example_ndkdemo_test2_JNI2_callbackHelloFromJava
+void JNICALL Java_com_example_ndkdemo_test3_TestJni3_callbackHelloFromJava
 (JNIEnv *env, jobject jobj) {
 //1.得到字节码
 //jclass      (*FindClass)(JNIEnv*, const char*);
@@ -66,7 +66,7 @@ jobject jobject1 = (*env).AllocObject(jclazz);
  *
  */
 extern "C"
-void JNICALL Java_com_example_ndkdemo_test2_JNI2_callbackPrintString
+void JNICALL Java_com_example_ndkdemo_test3_TestJni3_callbackPrintString
 (JNIEnv *env, jobject jobj) {
 //1.得到字节码
 //jclass      (*FindClass)(JNIEnv*, const char*);
@@ -90,7 +90,7 @@ jstring jst = (*env).NewStringUTF("I am Android!");
  *
  */
 extern "C"
-void JNICALL Java_com_example_ndkdemo_test2_JNI2_callbackSayHello
+void JNICALL Java_com_example_ndkdemo_test3_TestJni3_callbackSayHello
 (JNIEnv *env, jobject jobj) {
 //1.得到字节码
 //jclass      (*FindClass)(JNIEnv*, const char*);

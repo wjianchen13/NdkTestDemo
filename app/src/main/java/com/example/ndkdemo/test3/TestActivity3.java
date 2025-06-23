@@ -1,6 +1,7 @@
 package com.example.ndkdemo.test3;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,13 +26,19 @@ public class TestActivity3 extends AppCompatActivity {
     }
 
     public void onTest1(View v) {
-        tvTest.setText(new Nativelib1().stringFromJNI());
+        new TestJni3().callbackAdd();
     }
 
+    public void onTest2(View v) {
+        new TestJni3().callbackHelloFromJava();
+    }
 
+    public void onTest3(View v) {
+        new TestJni3().callbackPrintString();
+    }
 
-//    static {
-//        System.loadLibrary("ndkdemo");
-//    }
+    public void onTest4(View v) {
+        new TestJni3().callbackSayHello();
+    }
 
 }
